@@ -26,6 +26,7 @@ def get_text_messages(message):
                     ...
     except Exception as ex:
         print(ex)
+        bot.send_message(message.chat.id, f"error:\n{ex}")
 
 
 @bot.message_handler(content_types=['document'])
